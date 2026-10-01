@@ -1,0 +1,225 @@
+{
+  "project": {
+    "name": "Sample Infrastructure Project",
+    "id": "EVOTRANSDIGI-SAMPLE-001",
+    "version": "1.0.0",
+    "description": "Sample project for demonstrating EvoTransDigi validation",
+    "organization": "EvoTransDigi",
+    "department": "Infrastructure Planning",
+    "responsible_engineer": "John Doe",
+    "date_created": "2024-10-01T10:00:00",
+    "date_modified": "2024-10-01T15:30:00"
+  },
+  "drawing": {
+    "title": "Sample Site Plan",
+    "drawing_number": "DWG-001",
+    "revision": "A",
+    "scale": "1:1000",
+    "units": "meters",
+    "precision": 0.001,
+    "coordinate_system": "ETRS89 / UTM Zone 32N",
+    "projection": "UTM Zone 32N",
+    "datum": "ETRS89",
+    "software": "AutoCAD 2024",
+    "software_version": "24.0",
+    "file_format": ".dwg",
+    "file_size": 1024000,
+    "author": "Jane Smith",
+    "checked_by": "Robert Johnson",
+    "approved_by": "John Doe",
+    "approval_date": "2024-10-01",
+    "approval_status": "Approved"
+  },
+  "metadata": {
+    "title": "Sample Site Plan",
+    "abstract": "A sample site plan demonstrating EvoTransDigi validation requirements",
+    "date": "2024-10-01",
+    "organization": "EvoTransDigi",
+    "keywords": ["infrastructure", "site plan", "sample", "validation"],
+    "contact_info": {
+      "name": "John Doe",
+      "email": "john.doe@evotransdigi.de",
+      "phone": "+49 123 456789"
+    },
+    "project_id": "EVOTRANSDIGI-SAMPLE-001",
+    "version": "1.0.0",
+    "timestamp": "2024-10-01T15:30:00",
+    "responsible_engineer": "John Doe",
+    "drawing_type": "site_plan",
+    "standard_number": "EvoTransDigi-STD-001:2024",
+    "publication_date": "2024-01-01"
+  },
+  "layers": [
+    {
+      "name": "EVTD_INFRASTRUCTURE_ROADS",
+      "description": "Road network and infrastructure",
+      "color": "red",
+      "line_type": "continuous",
+      "line_weight": 0.35,
+      "visible": true,
+      "freeze": false,
+      "lock": false,
+      "group": "INFRASTRUCTURE",
+      "sublayer": "ROADS"
+    },
+    {
+      "name": "EVTD_TRANSPORTATION_ROAD_NETWORK",
+      "description": "Road transportation network",
+      "color": "blue",
+      "line_type": "dashed",
+      "line_weight": 0.25,
+      "visible": true,
+      "freeze": false,
+      "lock": false,
+      "group": "TRANSPORTATION",
+      "sublayer": "ROAD_NETWORK"
+    },
+    {
+      "name": "EVTD_UTILITIES_ELECTRICAL",
+      "description": "Electrical utility lines",
+      "color": "yellow",
+      "line_type": "dotted",
+      "line_weight": 0.20,
+      "visible": true,
+      "freeze": false,
+      "lock": false,
+      "group": "UTILITIES",
+      "sublayer": "ELECTRICAL"
+    },
+    {
+      "name": "EVTD_TOPOGRAPHY_CONTOURS",
+      "description": "Topographic contour lines",
+      "color": "green",
+      "line_type": "continuous",
+      "line_weight": 0.15,
+      "visible": true,
+      "freeze": false,
+      "lock": false,
+      "group": "TOPOGRAPHY",
+      "sublayer": "CONTOURS"
+    },
+    {
+      "name": "EVTD_BUILDINGS_BUILDING_OUTLINES",
+      "description": "Building outlines and footprints",
+      "color": "gray",
+      "line_type": "continuous",
+      "line_weight": 0.40,
+      "visible": true,
+      "freeze": false,
+      "lock": false,
+      "group": "BUILDINGS",
+      "sublayer": "BUILDING_OUTLINES"
+    },
+    {
+      "name": "EVTD_ANNOTATION",
+      "description": "Text annotations and labels",
+      "color": "black",
+      "line_type": "continuous",
+      "line_weight": 0.00,
+      "visible": true,
+      "freeze": false,
+      "lock": false,
+      "group": "ANNOTATION"
+    },
+    {
+      "name": "EVTD_DIMENSIONS",
+      "description": "Dimension lines and measurements",
+      "color": "magenta",
+      "line_type": "continuous",
+      "line_weight": 0.20,
+      "visible": true,
+      "freeze": false,
+      "lock": false,
+      "group": "DIMENSIONS"
+    },
+    {
+      "name": "EVTD_BORDERS",
+      "description": "Drawing borders and title block",
+      "color": "black",
+      "line_type": "continuous",
+      "line_weight": 0.50,
+      "visible": true,
+      "freeze": true,
+      "lock": true,
+      "group": "BORDERS"
+    }
+  ],
+  "attributes": {
+    "scale": "1:1000",
+    "coordinate_system": "ETRS89 / UTM Zone 32N",
+    "projection": "UTM Zone 32N",
+    "units": "meters",
+    "precision": 0.001,
+    "layer_count": 8,
+    "entity_count": 150,
+    "block_count": 10,
+    "xref_count": 5,
+    "file_size": 1024000
+  },
+  "geometry": {
+    "extents": {
+      "min_x": 500000.0,
+      "min_y": 5800000.0,
+      "max_x": 501000.0,
+      "max_y": 5801000.0
+    },
+    "coordinate_system": "ETRS89 / UTM Zone 32N",
+    "projection": "UTM Zone 32N",
+    "datum": "ETRS89",
+    "units": "meters",
+    "precision": 0.001
+  },
+  "quality": {
+    "positional_accuracy": 0.01,
+    "attribute_completeness": 100,
+    "geometric_precision": 0.001,
+    "semantic_accuracy": 98.5
+  },
+  "evotransdigi": {
+    "compliance_level": "level_3",
+    "standards": [
+      "EvoTransDigi-STD-001:2024",
+      "EvoTransDigi-STD-002:2024",
+      "EvoTransDigi-STD-003:2024",
+      "EvoTransDigi-STD-004:2024",
+      "EvoTransDigi-STD-005:2024"
+    ],
+    "validation_results": {
+      "metadata_complete": true,
+      "required_layers_present": true,
+      "attribute_validation": true,
+      "geometric_accuracy": true,
+      "semantic_validation": true,
+      "cross_reference_check": true
+    }
+  },
+  "validation": {
+    "last_validated": "2024-10-01T15:30:00",
+    "validation_standard": "EvoTransDigi-STD-001:2024",
+    "compliance_level": "level_3",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Optional field 'description' is recommended"
+    ],
+    "info": [
+      "All required metadata fields present",
+      "All required layers present",
+      "Coordinate system validated",
+      "Projection validated"
+    ]
+  },
+  "references": {
+    "related_drawings": [
+      "DWG-002",
+      "DWG-003"
+    ],
+    "standards": [
+      "ISO 19115:2003",
+      "EN ISO 19115:2005",
+      "DIN 1356-1:1995",
+      "EvoTransDigi-STD-001:2024",
+      "EvoTransDigi-STD-002:2024"
+    ]
+  }
+}

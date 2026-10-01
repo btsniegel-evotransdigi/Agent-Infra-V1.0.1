@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "generated_at": "2024-10-01T15:30:00",
+    "file": "examples/sample_drawing.dwg",
+    "compliance_level": "level_3",
+    "project_id": "EVOTRANSDIGI-SAMPLE-001",
+    "validation_tool": "Agent-Infra-V1.0.1",
+    "validation_version": "1.0.1"
+  },
+  "validation_summary": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Optional field 'description' is recommended for better documentation"
+    ],
+    "info": [
+      "File format validated: DWG",
+      "Metadata extracted successfully",
+      "All required metadata fields present",
+      "All required layers present",
+      "Coordinate system validated: ETRS89 / UTM Zone 32N",
+      "Projection validated: UTM Zone 32N",
+      "Geometric accuracy meets requirements",
+      "Semantic validation passed",
+      "Cross-reference check passed"
+    ],
+    "compliance_level": "level_3",
+    "standard": "EvoTransDigi",
+    "timestamp": "2024-10-01T15:30:00"
+  },
+  "file_information": {
+    "path": "examples/sample_drawing.dwg",
+    "file_format": ".dwg",
+    "file_size": 1024000,
+    "last_modified": "2024-10-01T10:00:00",
+    "metadata": {
+      "title": "Sample Site Plan",
+      "drawing_number": "DWG-001",
+      "revision": "A",
+      "scale": "1:1000",
+      "units": "meters",
+      "coordinate_system": "ETRS89 / UTM Zone 32N",
+      "projection": "UTM Zone 32N",
+      "datum": "ETRS89",
+      "software": "AutoCAD 2024",
+      "software_version": "24.0",
+      "author": "Jane Smith",
+      "organization": "EvoTransDigi",
+      "date_created": "2024-10-01T10:00:00",
+      "date_modified": "2024-10-01T15:30:00"
+    }
+  },
+  "standards_validated": [
+    {
+      "standard": "ISO 19115:2003",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "info": [
+        "ISO 19115 field 'title' present",
+        "ISO 19115 field 'abstract' present",
+        "ISO 19115 field 'date' present",
+        "ISO 19115 field 'organization' present",
+        "ISO 19115 field 'standard_number' present",
+        "ISO 19115 field 'publication_date' present"
+      ],
+      "compliance_level": "level_3",
+      "metadata": {
+        "validation_type": "metadata",
+        "required_fields_checked": 6,
+        "required_fields_present": 6
+      }
+    },
+    {
+      "standard": "EN ISO 19115:2005",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "info": [
+        "EN field 'standard_number' present",
+        "EN field 'publication_date' present",
+        "EN field 'scope' present",
+        "EN field 'title' present",
+        "EN field 'technical_committee' present"
+      ],
+      "compliance_level": "level_3",
+      "metadata": {
+        "validation_type": "metadata",
+        "required_fields_checked": 5,
+        "required_fields_present": 5
+      }
+    },
+    {
+      "standard": "DIN 1356-1:1995",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "info": [
+        "DIN field 'norm_number' present",
+        "DIN field 'title' present",
+        "DIN field 'validity' present",
+        "DIN field 'publication_date' present",
+        "DIN field 'issuing_body' present"
+      ],
+      "compliance_level": "level_3",
+      "metadata": {
+        "validation_type": "drawing",
+        "drawing_type": "site_plan",
+        "tolerances_checked": true
+      }
+    },
+    {
+      "standard": "EvoTransDigi-STD-001:2024",
+      "valid": true,
+      "errors": [],
+      "warnings": [
+        "Optional field 'description' is recommended"
+      ],
+      "info": [
+        "Metadata field 'project_id' present",
+        "Metadata field 'version' present",
+        "Metadata field 'timestamp' present",
+        "Metadata field 'responsible_engineer' present",
+        "Metadata field 'drawing_type' present",
+        "Metadata field 'scale' present",
+        "Metadata field 'coordinate_system' present",
+        "Metadata field 'projection' present",
+        "Metadata field 'units' present",
+        "Metadata field 'precision' present",
+        "Metadata field 'software' present",
+        "Metadata field 'software_version' present",
+        "Metadata field 'author' present",
+        "Metadata field 'organization' present",
+        "Metadata field 'date_created' present",
+        "Metadata field 'date_modified' present"
+      ],
+      "compliance_level": "level_3",
+      "metadata": {
+        "validation_type": "evotransdigi_metadata",
+        "required_fields_checked": 15,
+        "required_fields_present": 15,
+        "optional_fields_checked": 5,
+        "optional_fields_present": 0
+      }
+    },
+    {
+      "standard": "EvoTransDigi-STD-002:2024",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "info": [
+        "Required layer 'INFRASTRUCTURE' present",
+        "Required layer 'TRANSPORTATION' present",
+        "Required layer 'UTILITIES' present",
+        "Required layer 'TOPOGRAPHY' present",
+        "Required layer 'VEGETATION' present",
+        "Required layer 'WATER_BODIES' present",
+        "Required layer 'BUILDINGS' present",
+        "Required layer 'ANNOTATION' present",
+        "Required layer 'DIMENSIONS' present",
+        "Required layer 'BORDERS' present",
+        "Layer naming convention validated for all layers",
+        "Layer prefix 'EVTD_' validated"
+      ],
+      "compliance_level": "level_3",
+      "metadata": {
+        "validation_type": "evotransdigi_layers",
+        "required_layers_checked": 10,
+        "required_layers_present": 10,
+        "layer_naming_validated": true
+      }
+    }
+  ],
+  "evotransdigi_validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Optional field 'description' is recommended for better documentation"
+    ],
+    "info": [
+      "EvoTransDigi metadata validation passed",
+      "EvoTransDigi layer validation passed",
+      "EvoTransDigi attribute validation passed",
+      "EvoTransDigi geometric validation passed",
+      "EvoTransDigi semantic validation passed",
+      "EvoTransDigi cross-reference validation passed"
+    ],
+    "compliance_level": "level_3",
+    "standard": "EvoTransDigi",
+    "timestamp": "2024-10-01T15:30:00",
+    "metadata": {
+      "validation_checks": [
+        "metadata_complete",
+        "required_layers_present",
+        "attribute_validation",
+        "geometric_accuracy",
+        "semantic_validation",
+        "cross_reference_check",
+        "quality_assurance_check",
+        "evotransdigi_specific_checks"
+      ],
+      "checks_passed": 8,
+      "checks_total": 8
+    }
+  },
+  "overall_compliance": true,
+  "total_errors": 0,
+  "total_warnings": 1,
+  "total_info": 45,
+  "recommendations": [
+    "All validations passed successfully",
+    "Consider adding 'description' field for better documentation",
+    "Review warnings for potential improvements"
+  ],
+  "compliance_matrix": {
+    "standard": "EvoTransDigi",
+    "compliance_level": "level_3",
+    "overall_status": "COMPLIANT",
+    "requirements": [
+      {"field": "project_id", "status": "PRESENT"},
+      {"field": "version", "status": "PRESENT"},
+      {"field": "timestamp", "status": "PRESENT"},
+      {"field": "responsible_engineer", "status": "PRESENT"},
+      {"field": "drawing_type", "status": "PRESENT"},
+      {"field": "scale", "status": "PRESENT"},
+      {"field": "coordinate_system", "status": "PRESENT"},
+      {"field": "projection", "status": "PRESENT"},
+      {"field": "units", "status": "PRESENT"},
+      {"field": "precision", "status": "PRESENT"},
+      {"field": "software", "status": "PRESENT"},
+      {"field": "software_version", "status": "PRESENT"},
+      {"field": "author", "status": "PRESENT"},
+      {"field": "organization", "status": "PRESENT"},
+      {"field": "date_created", "status": "PRESENT"},
+      {"field": "date_modified", "status": "PRESENT"}
+    ]
+  },
+  "quality_metrics": {
+    "positional_accuracy": {
+      "required": 0.05,
+      "actual": 0.01,
+      "status": "PASS",
+      "unit": "meters"
+    },
+    "attribute_completeness": {
+      "required": 100,
+      "actual": 100,
+      "status": "PASS",
+      "unit": "percent"
+    },
+    "geometric_precision": {
+      "required": 0.001,
+      "actual": 0.001,
+      "status": "PASS",
+      "unit": "meters"
+    },
+    "semantic_accuracy": {
+      "required": 95,
+      "actual": 98.5,
+      "status": "PASS",
+      "unit": "percent"
+    }
+  },
+  "performance_metrics": {
+    "validation_duration_seconds": 2.45,
+    "files_validated": 1,
+    "standards_checked": 5,
+    "compliance_level": "level_3"
+  }
+}
