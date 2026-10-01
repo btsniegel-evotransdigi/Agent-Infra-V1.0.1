@@ -1,0 +1,251 @@
+# International Standards Configuration
+# Configuration for ISO, EN, DIN, ANSI, and BSI standards
+
+standards:
+  iso:
+    enabled: true
+    versions:
+      - "ISO 19115:2003"
+      - "ISO 19115-1:2014"
+      - "ISO 19115-2:2019"
+      - "ISO 19131:2007"
+      - "ISO 19139:2007"
+      - "ISO 19111:2007"
+      - "ISO 19157:2013"
+      - "ISO 19107:2019"
+      - "ISO 19108:2002"
+      - "ISO 19109:2015"
+      - "ISO 19110:2016"
+      - "ISO 19125-1:2004"
+      - "ISO 19125-2:2004"
+      - "ISO 19141:2008"
+      - "ISO 19142:2010"
+      - "ISO 19143:2010"
+    required_fields:
+      - title
+      - abstract
+      - date
+      - organization
+      - standard_number
+      - publication_date
+      - scope
+    optional_fields:
+      - edition
+      - language
+      - pages
+      - price
+      - ics_code
+      - keywords
+      - contact_info
+      - maintenance_frequency
+    
+  en:
+    enabled: true
+    versions:
+      - "EN ISO 19115:2005"
+      - "EN ISO 19115-1:2014"
+      - "EN ISO 19115-2:2019"
+      - "EN 1990:2002+A1:2005"
+      - "EN 1991-1-1:2002"
+      - "EN 1991-1-2:2002"
+      - "EN 1991-1-3:2003"
+      - "EN 1991-1-4:2005"
+      - "EN 1992-1-1:2004"
+      - "EN 1992-1-2:2004"
+      - "EN 1993-1-1:2005"
+      - "EN 1993-1-2:2005"
+      - "EN 1997-1:2004"
+      - "EN 1998-1:2004"
+      - "EN 1998-2:2005"
+      - "EN 1998-3:2005"
+      - "EN 13501-1:2007"
+      - "EN 13501-2:2016"
+    required_fields:
+      - standard_number
+      - publication_date
+      - scope
+      - title
+      - technical_committee
+      - status
+    optional_fields:
+      - edition
+      - language
+      - pages
+      - price
+      - cenelec_reference
+      - harmonized_standard
+      - ics_code
+      - replaces
+      - replaced_by
+    
+  din:
+    enabled: true
+    versions:
+      - "DIN EN ISO 19115:2005"
+      - "DIN 1356-1:1995"
+      - "DIN 1356-2:1995"
+      - "DIN 18201:2012"
+      - "DIN 18202:2013"
+      - "DIN 18203-1:2016"
+      - "DIN 18203-2:2016"
+      - "DIN 18203-3:2016"
+      - "DIN 276-1:2008"
+      - "DIN 276-2:2008"
+      - "DIN 276-3:2008"
+      - "DIN 276-4:2009"
+      - "DIN 277-1:2016"
+      - "DIN 277-2:2016"
+      - "DIN 277-3:2016"
+      - "DIN 4102-1:1998"
+      - "DIN 4102-2:1977"
+      - "DIN 4102-4:2016"
+      - "DIN EN 1992-1-1:2005"
+      - "DIN EN 1993-1-1:2005"
+      - "DIN EN 1990:2002"
+    required_fields:
+      - norm_number
+      - title
+      - validity
+      - publication_date
+      - issuing_body
+      - scope
+    optional_fields:
+      - edition
+      - language
+      - pages
+      - price
+      - replaces
+      - replaced_by
+      - application_area
+      - committee
+      - norm_type
+    
+  ansi:
+    enabled: true
+    versions:
+      - "ANSI A14.1-2017"
+      - "ANSI A14.2-2017"
+      - "ANSI A14.3-2008"
+      - "ANSI A14.4-2009"
+      - "ANSI A14.5-2017"
+      - "ANSI A14.7-2018"
+      - "ANSI A117.1-2017"
+      - "ANSI Z1.1-1996"
+      - "ANSI Z535.1-2017"
+      - "ANSI Z535.2-2011"
+      - "ANSI Z535.3-2011"
+      - "ANSI Z535.4-2011"
+      - "ANSI Z535.5-2011"
+      - "ANSI Z535.6-2011"
+      - "ANSI B1.1-2019"
+      - "ANSI B1.2-1989"
+      - "ANSI B1.20-1973"
+    required_fields:
+      - standard_id
+      - title
+      - publication_date
+      - description
+      - developer
+      - approver
+    optional_fields:
+      - edition
+      - language
+      - pages
+      - price
+      - ics_code
+      - replaces
+      - reaffirmed_date
+      - withdrawn_date
+      - committee
+      - secretariat
+    
+  bsi:
+    enabled: true
+    versions:
+      - "BS EN ISO 19115:2005"
+      - "BS 1192-4:2014"
+      - "BS 8541-1:2012"
+      - "BS 8541-2:2011"
+      - "BS 8541-3:2012"
+      - "BS 8541-4:2015"
+      - "BS 8541-5:2015"
+      - "BS 8541-6:2015"
+      - "BS EN 1990:2002+A1:2005"
+      - "BS EN 1991-1-1:2002"
+      - "BS EN 1992-1-1:2004"
+      - "BS EN 1993-1-1:2005"
+      - "BS EN 1997-1:2004"
+      - "BS EN 1998-1:2004"
+      - "BS 476-3:2004"
+      - "BS 476-4:1970"
+      - "BS 476-6:1989"
+      - "BS 476-7:1997"
+      - "BS 476-20:1987"
+      - "BS 476-21:1987"
+      - "BS 476-22:1987"
+      - "BS EN 13501-1:2007"
+      - "BS EN 13501-2:2016"
+    required_fields:
+      - standard_ref
+      - title
+      - issue_date
+      - scope
+      - status
+      - publisher
+    optional_fields:
+      - edition
+      - language
+      - pages
+      - price
+      - isbn
+      - replaces
+      - replaced_by
+      - committees
+      - technical_committee
+      - adoption_date
+
+# Agent settings
+agent:
+  debug: false
+  strict_mode: false
+  default_standard: "ISO 19115:2003"
+  default_compliance_level: "level_2"
+  
+# Validation rules
+validation:
+  metadata:
+    required:
+      - title
+      - date
+      - author
+      - organization
+    optional:
+      - description
+      - version
+      - keywords
+      - project_id
+      - revision
+  
+  drawing:
+    required_layers:
+      - "ARCHITECTURE"
+      - "STRUCTURE"
+      - "ELECTRICAL"
+      - "PLUMBING"
+      - "HVAC"
+    required_attributes:
+      - scale
+      - coordinate_system
+      - projection
+      - units
+      - precision
+    
+  geometry:
+    min_precision: 0.001
+    max_coordinate_value: 1000000
+    valid_projections:
+      - "UTM"
+      - "Geographic"
+      - "Lambert"
+      - "Mercator"
+      - "Transverse Mercator"

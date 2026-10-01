@@ -1,0 +1,294 @@
+# EvoTransDigi Configuration
+# Project-specific standards and requirements for EvoTransDigi
+
+evotransdigi:
+  enabled: true
+  project_name: "EvoTransDigi Infrastructure Validation"
+  project_id: "EVOTRANSDIGI-2024"
+  version: "1.0.1"
+  description: "Configuration for EvoTransDigi-specific validation requirements"
+  
+  # EvoTransDigi-specific standards
+  specific_standards:
+    - "EvoTransDigi-STD-001:2024"
+    - "EvoTransDigi-STD-002:2024"
+    - "EvoTransDigi-STD-003:2024"
+    - "EvoTransDigi-STD-004:2024"
+    - "EvoTransDigi-STD-005:2024"
+  
+  # Standard references
+  standard_references:
+    EvoTransDigi-STD-001:2024:
+      title: "Metadata Requirements for Infrastructure Drawings"
+      description: "Standard for metadata structure and content in infrastructure drawings"
+      version: "1.0"
+      publication_date: "2024-01-01"
+      scope: "All infrastructure and transportation planning drawings"
+      
+    EvoTransDigi-STD-002:2024:
+      title: "Layer Naming Conventions"
+      description: "Standard naming conventions for CAD layers in infrastructure projects"
+      version: "1.0"
+      publication_date: "2024-01-01"
+      scope: "All CAD drawings in EvoTransDigi projects"
+      
+    EvoTransDigi-STD-003:2024:
+      title: "Quality Assurance Procedures"
+      description: "Quality assurance procedures for drawing validation"
+      version: "1.0"
+      publication_date: "2024-01-01"
+      scope: "All drawing validation processes"
+      
+    EvoTransDigi-STD-004:2024:
+      title: "Coordinate System Requirements"
+      description: "Requirements for coordinate systems and projections"
+      version: "1.0"
+      publication_date: "2024-01-01"
+      scope: "All geospatial drawings"
+      
+    EvoTransDigi-STD-005:2024:
+      title: "Compliance Reporting Format"
+      description: "Standard format for compliance reports"
+      version: "1.0"
+      publication_date: "2024-01-01"
+      scope: "All compliance reports"
+
+  # Validation rules
+  validation_rules:
+    metadata:
+      required:
+        - project_id
+        - version
+        - timestamp
+        - responsible_engineer
+        - drawing_type
+        - scale
+        - coordinate_system
+        - projection
+        - units
+        - precision
+        - software
+        - software_version
+        - author
+        - organization
+        - date_created
+        - date_modified
+      optional:
+        - description
+        - keywords
+        - revision
+        - approval_status
+        - approval_date
+        - approver
+        - review_status
+        - review_comments
+        - related_drawings
+        - references
+        - notes
+      
+    drawing:
+      required_layers:
+        - "INFRASTRUCTURE"
+        - "TRANSPORTATION"
+        - "UTILITIES"
+        - "TOPOGRAPHY"
+        - "VEGETATION"
+        - "WATER_BODIES"
+        - "BUILDINGS"
+        - "ANNOTATION"
+        - "DIMENSIONS"
+        - "BORDERS"
+      
+      required_attributes:
+        - layer_name
+        - layer_description
+        - color
+        - line_type
+        - line_weight
+        - visibility
+        - freeze
+        - lock
+        
+      layer_naming_conventions:
+        prefix: "EVTD_"
+        separator: "_"
+        max_length: 50
+        allowed_characters: "[A-Za-z0-9_\-\.]"
+        
+      layer_groups:
+        INFRASTRUCTURE:
+          description: "Infrastructure elements"
+          sublayers:
+            - "ROADS"
+            - "BRIDGES"
+            - "TUNNELS"
+            - "RAILWAYS"
+            - "PATHS"
+            
+        TRANSPORTATION:
+          description: "Transportation networks"
+          sublayers:
+            - "ROAD_NETWORK"
+            - "RAIL_NETWORK"
+            - "PED_NETWORK"
+            - "CYCLE_NETWORK"
+            - "PUBLIC_TRANSPORT"
+            
+        UTILITIES:
+          description: "Utility services"
+          sublayers:
+            - "ELECTRICAL"
+            - "WATER"
+            - "SEWER"
+            - "GAS"
+            - "TELECOMMUNICATIONS"
+            - "DRAINAGE"
+            
+        TOPOGRAPHY:
+          description: "Topographic features"
+          sublayers:
+            - "CONTOURS"
+            - "SPOT_ELEVATIONS"
+            - "SLOPES"
+            - "TERRAIN"
+            
+        BUILDINGS:
+          description: "Building structures"
+          sublayers:
+            - "BUILDING_OUTLINES"
+            - "BUILDING_DETAILS"
+            - "ENTRANCES"
+            - "WINDOWS_DOORS"
+      
+    geometry:
+      min_precision: 0.001
+      max_coordinate_value: 10000000
+      valid_projections:
+        - "UTM Zone 32N"
+        - "UTM Zone 33N"
+        - "ETRS89"
+        - "DHDN"
+        - "WGS84"
+      coordinate_system_requirements:
+        required: true
+        datum: "ETRS89"
+        
+    quality:
+      positional_accuracy:
+        min: 0.01
+        max: 0.1
+        unit: "meters"
+      attribute_accuracy:
+        required: true
+        completeness: 100
+        
+    semantic:
+      classification_required: true
+      classification_system: "EvoTransDigi"
+      object_types:
+        - "Point"
+        - "Line"
+        - "Polygon"
+        - "Text"
+        - "Dimension"
+        - "Block"
+        - "Reference"
+
+  # Compliance levels
+  compliance_levels:
+    level_1:
+      description: "Basic Compliance - Essential requirements"
+      checks:
+        - metadata_complete
+        - required_layers_present
+        - file_format_valid
+        - basic_geometry_valid
+      requirements:
+        - "All required metadata fields must be present"
+        - "All required layers must be present in the drawing"
+        - "File must be in a supported format"
+        - "Basic geometry validation passed"
+      
+    level_2:
+      description: "Standard Compliance - Full standard compliance"
+      checks:
+        - all_level_1_checks
+        - attribute_validation
+        - geometric_accuracy
+        - coordinate_system_valid
+        - projection_valid
+      requirements:
+        - "All Level 1 requirements"
+        - "All required attributes must be present and valid"
+        - "Geometric accuracy must meet minimum requirements"
+        - "Coordinate system must be properly defined"
+        - "Projection must be valid and appropriate"
+      
+    level_3:
+      description: "Advanced Compliance - Full compliance with extended validation"
+      checks:
+        - all_level_2_checks
+        - semantic_validation
+        - cross_reference_check
+        - quality_assurance_check
+        - evotransdigi_specific_checks
+      requirements:
+        - "All Level 2 requirements"
+        - "Semantic validation must pass"
+        - "Cross-references between elements must be valid"
+        - "Quality assurance procedures must be followed"
+        - "EvoTransDigi-specific requirements must be met"
+
+  # Quality thresholds
+  quality_thresholds:
+    positional_accuracy: 0.05  # meters
+    attribute_completeness: 100  # percent
+    geometric_precision: 0.001  # meters
+    semantic_accuracy: 95  # percent
+    
+  # Reporting
+  reporting:
+    report_format: "JSON"
+    report_include:
+      - summary
+      - detailed_results
+      - recommendations
+      - compliance_matrix
+      - metadata
+    report_exclude:
+      - raw_data
+      - debug_info
+    
+  # Integration settings
+  integration:
+    api_enabled: true
+    api_endpoint: "/api/validate"
+    api_version: "v1"
+    webhook_enabled: false
+    webhook_url: ""
+    database_integration: false
+    database_connection: ""
+
+# Project-specific settings
+project:
+  default_coordinate_system: "ETRS89 / UTM Zone 32N"
+  default_units: "meters"
+  default_precision: 0.001
+  default_scale: "1:1000"
+  
+  # Team information
+  team:
+    organization: "EvoTransDigi"
+    department: "Infrastructure Planning"
+    contact_email: "support@evotransdigi.de"
+    
+  # Validation workflow
+  workflow:
+    auto_validate_on_save: true
+    auto_generate_report: true
+    notification_settings:
+      email_notifications: true
+      notification_recipients:
+        - "engineer@evotransdigi.de"
+        - "qa@evotransdigi.de"
+      notification_threshold: "warning"
