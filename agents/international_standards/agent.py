@@ -351,11 +351,13 @@ class InternationalStandardsAgent:
         self.standards = {
             "iso": ISOStandard(
                 standard_number=self.config.default_standard,
-                title="Default ISO Standard"
+                title="Default ISO Standard",
+                publication_date="2003-01-01"
             ),
             "en": ENStandard(
                 standard_number="EN ISO 19115:2005",
                 title="Default EN Standard",
+                publication_date="2005-01-01",
                 scope="Metadata for geographic information"
             ),
             "din": DINStandard(
@@ -387,9 +389,9 @@ class InternationalStandardsAgent:
             with open(evotransdigi_config, 'r') as f:
                 evotransdigi_data = yaml.safe_load(f) or {}
             self.config.evotransdigi_config = evotransdigi_data
-            self.evotransdigi_validator = EvoTransDigiValidator(self.config)
+            self.evotransdigi_validator = EvoTransDigiValidator(self.config.evotransdigi_config)
         elif self.config.evotransdigi_config:
-            self.evotransdigi_validator = EvoTransDigiValidator(self.config)
+            self.evotransdigi_validator = EvoTransDigiValidator(self.config.evotransdigi_config)
         
         self.debug = debug
         self.logger.info("International Standards Agent initialized")
@@ -837,7 +839,7 @@ class InternationalStandardsAgent:
         if config_data:
             self.config = AgentConfig.from_yaml(config_str)
             if self.config.evotransdigi_config:
-                self.evotransdigi_validator = EvoTransDigiValidator(self.config)
+                self.evotransdigi_validator = EvoTransDigiValidator(self.config.evotransdigi_config)
             self.logger.info("Configuration loaded from string")
 
 

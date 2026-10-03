@@ -113,7 +113,7 @@ evotransdigi:
         prefix: "EVTD_"
         separator: "_"
         max_length: 50
-        allowed_characters: "[A-Za-z0-9_\-\.]"
+        allowed_characters: '[A-Za-z0-9_\-\.]'
         
       layer_groups:
         INFRASTRUCTURE:
